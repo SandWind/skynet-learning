@@ -23,7 +23,7 @@ skynet.start(function()
 end)
 else
 skynet.start(function()
-      sharemap.register("./test/sharemap.sp")
+      sharemap.register("./sharemap.sp")
       local slave=skynet.newservice(SERVER_NAME,"slave")
       local writer=sharemap.writer("foobar",{x=0,y=0,s="hello"})
       skynet.call(slave,"lua","init","foobar",writer:copy())
